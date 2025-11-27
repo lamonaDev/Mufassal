@@ -30,21 +30,21 @@ const FiveBreadcrumbs = () => {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          <BreadcrumbLink href="/" className='text-white'>Home</BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbSeparator />
+            <BreadcrumbSeparator className='text-white' />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/products">Products</BreadcrumbLink>
+          <BreadcrumbLink className='text-white' href="/products">Products</BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbSeparator />
+            <BreadcrumbSeparator className='text-white' />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/products/electronics">Electronics</BreadcrumbLink>
+          <BreadcrumbLink className='text-white' href="/products/electronics">Electronics</BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbSeparator />
+            <BreadcrumbSeparator className='text-white' />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/products/electronics/laptops">Laptops</BreadcrumbLink>
+          <BreadcrumbLink className='text-white' href="/products/electronics/laptops">Laptops</BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbSeparator />
+            <BreadcrumbSeparator className='text-white' />
         <BreadcrumbItem>
           <BreadcrumbPage>Dell XPS 15</BreadcrumbPage>
         </BreadcrumbItem>
@@ -57,9 +57,7 @@ export default function Page() {
   return (
     <main className='flex flex-row overflow-hidden h-screen'>
       <div className='flex-1 overflow-auto'>
-        <h1 className='bg-amber-400 text-2xl text-center w-full'>First DashBoard</h1>
         <FirstDashboard />
-        <Button className='m-10'>sadasdasd</Button>
         <div className='w-full flex justify-center items-center'>
           <FiveBreadcrumbs />
         </div>

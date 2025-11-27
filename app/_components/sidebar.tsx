@@ -15,8 +15,6 @@ import {
 } from "@/components/ui/sidebar"
 import Link from "next/link"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-
-// Menu items.
 const items = [
     {
         title: "Home",
@@ -135,7 +133,7 @@ export default function AppSidebar() {
                             </Collapsible>
                         </SidebarMenu>
                     </SidebarGroupContent>
-</SidebarGroup>
+                </SidebarGroup>
                 </SidebarGroup>
             </SidebarContent>
         </Sidebar>

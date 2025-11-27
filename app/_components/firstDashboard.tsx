@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 function FirstDashboard() {
     return (
-        <div className="m-10 p-5 bg-red-800 rounded-2xl text-center">
+        <div className="m-10 p-5 backdrop-blur-2xl rounded-2xl text-center">
             <iframe
             title="TEST"
             width="600"
