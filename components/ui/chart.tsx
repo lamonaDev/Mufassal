@@ -273,7 +273,6 @@ function ChartLegendContent({
   if (!payload?.length) {
     return null
   }
-
   return (
     <div
       className={cn(
@@ -287,7 +286,6 @@ function ChartLegendContent({
         .map((item) => {
           const key = `${nameKey || item.dataKey || "value"}`
           const itemConfig = getPayloadConfigFromPayload(config, item, key)
-
           return (
             <div
               key={item.value}
