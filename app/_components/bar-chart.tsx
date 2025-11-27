@@ -51,7 +51,6 @@ const chartConfig = {
 export default function ChartBarInteractive() {
     const [activeChart, setActiveChart] =
         React.useState<keyof typeof chartConfig>("desktop")
-
     const total = React.useMemo(
         () => ({
             desktop: chartData.reduce((acc, curr) => acc + curr.desktop, 0),
@@ -59,7 +58,6 @@ export default function ChartBarInteractive() {
         }),
         []
     )
-
     return (
         <Card className="py-0 mx-auto mt-10 backdrop-blur-xl bg-white/5 text-white m-5">
             <CardHeader className="flex flex-col items-stretch border-b !p-0 sm:flex-row">
