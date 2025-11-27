@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 "use client";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script src="https://t.contentsquare.net/uxa/6c6ab6f0a64d7.js"></script>
         <meta name="google-site-verification" content="DTjnT0AFssM6Ek-3HwXDdJIL_zrpni03KOi0gi7cOOg" />
       </head>
       <body
