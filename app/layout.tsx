@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-sync-scripts */
 "use client";
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import AppSideBar from "./_components/sidebar";
-import FloatingLines from "@/components/FloatingLines";
-import Prism from "@/components/Prism";
+import LightRays from "@/components/LightRays";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,23 +34,28 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
         <div className="fixed inset-0 -z-10">
-          <Prism
-            animationType="rotate"
-              timeScale={0.5}
-                height={3.5}
-                  baseWidth={5.5}
-                    scale={3.6}
-                  hueShift={0}
-                colorFrequency={1}
-              noise={0}
-            glow={1}
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#00ffff"
+            raysSpeed={1}
+            lightSpread={90.8}
+            rayLength={3.2}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0.1}
+            distortion={0}
+            className="custom-rays"
           />
         </div>
         <SidebarProvider>
           <AppSideBar />
           <main className="relative min-h-screen w-screen">
+            <div className="mb-[8vh]">
+              <Navbar />
+            </div>
             <SidebarTrigger />
             {children}
+          <Footer />
           </main>
         </SidebarProvider>
       </body>

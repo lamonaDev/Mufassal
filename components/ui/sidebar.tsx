@@ -1,5 +1,5 @@
 "use client"
-
+import { Menu } from 'lucide-react';
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -171,6 +171,7 @@ function Sidebar({
         data-slot="sidebar"
         className={cn(
           "bg-sidebar text-sidebar-foreground flex h-full w-(--sidebar-width) flex-col",
+          "backdrop-blur-2xl", // Added backdrop blur
           className
         )}
         {...props}
@@ -187,7 +188,11 @@ function Sidebar({
           data-sidebar="sidebar"
           data-slot="sidebar"
           data-mobile="true"
-          className="bg-sidebar text-sidebar-foreground w-(--sidebar-width) p-0 [&>button]:hidden"
+          className={cn(
+            "bg-sidebar text-sidebar-foreground w-(--sidebar-width) p-0 [&>button]:hidden",
+            "backdrop-blur-2xl", // Added backdrop blur
+            className
+          )}
           style={
             {
               "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
@@ -244,7 +249,11 @@ function Sidebar({
         <div
           data-sidebar="sidebar"
           data-slot="sidebar-inner"
-          className="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"
+          className={cn(
+            "bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm",
+            "backdrop-blur-2xl", // Added backdrop blur
+            className
+          )}
         >
           {children}
         </div>
@@ -252,6 +261,7 @@ function Sidebar({
     </div>
   )
 }
+
 
 function SidebarTrigger({
   className,
@@ -266,14 +276,14 @@ function SidebarTrigger({
       data-slot="sidebar-trigger"
       variant="ghost"
       size="icon"
-      className={cn("size-7", className)}
+      className={cn("size-8 fixed mt-[15vh] text-4xl w-fit p-2 rounded-full m-3 hover:bg-amber-700", className)}
       onClick={(event) => {
         onClick?.(event)
         toggleSidebar()
       }}
       {...props}
     >
-      <PanelLeftIcon />
+      <Menu className='text-white font-bold'/>
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   )

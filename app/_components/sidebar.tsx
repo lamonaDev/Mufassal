@@ -1,5 +1,5 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
-import { ArrowDown } from 'lucide-react';
+import { Ellipsis } from 'lucide-react';
 import {
     Sidebar,
     SidebarContent,
@@ -85,7 +85,7 @@ export default function AppSidebar() {
                             <Collapsible className="group/collapsible">
                                 <SidebarMenuItem>
                                     <CollapsibleTrigger asChild>
-                                            <SidebarMenuButton tooltip="Expand Settings" className="font-black">Settings <ArrowDown /></SidebarMenuButton>
+                                            <SidebarMenuButton tooltip="Expand Settings" className="font-black">Settings <Ellipsis /></SidebarMenuButton>
                                     </CollapsibleTrigger>
                                     <CollapsibleContent>
                                         <SidebarMenuSub>
@@ -103,7 +103,7 @@ export default function AppSidebar() {
                                                     <Collapsible  className="group/collabsible">
                                                         <SidebarMenuItem>
                                                             <CollapsibleTrigger asChild>
-                                                                <SidebarMenuButton tooltip="Expand Settings">Another Section <ArrowDown/></SidebarMenuButton>
+                                                                <SidebarMenuButton tooltip="Expand Settings">Another Section <Ellipsis /></SidebarMenuButton>
                                                             </CollapsibleTrigger>
                                                             <CollapsibleContent>
                                                                 <SidebarMenuSub>
