@@ -1,6 +1,5 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
-
 interface SeriesData {
     data: number[];
 }
