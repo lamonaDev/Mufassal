@@ -5,7 +5,7 @@ import { NavigationSheet } from "@/components/navigation-sheet";
 import { ArrowUpRight } from "lucide-react";
 const Navbar = () => {
   return (
-    <nav className="h-16 bg-accent mb-[15vh] fixed w-screen">
+    <nav className="h-16 bg-accent mb-[15vh] fixed w-screen z-10">
       <div className="h-full flex items-center justify-between max-w-(--breakpoint-lg) mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8">
           <Logo />

@@ -18,6 +18,8 @@ import Hero from '@/components/hero';
 //   );
 // }
 import React from 'react';
+import ApexBarChart from './_components/line-chart';
+import AnotherChartToTest from './_components/another-chart';
 // import dynamic from 'next/dynamic';
 // import { Button } from '@/components/ui/button';
 // import  ChartBarInteractive  from './_components/bar-chart';
@@ -59,7 +61,11 @@ export default function HomePage() {
   return (
     <main className='flex flex-row overflow-hidden h-screen'>
       <div className='flex-1 overflow-auto'>
-        <Hero/>
+        <Hero />
+        <div className='flex items-center justify-center'>
+          {/* <ApexBarChart /> */}
+          <AnotherChartToTest />
+        </div>
       </div>
     </main>
   );
