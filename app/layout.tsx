@@ -50,7 +50,7 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSideBar />
           <main className="relative min-h-screen w-screen">
-            <div className="mb-[6.5vh]">
+            <div className="mb-[8vh]">
               <Navbar />
             </div>
             <SidebarTrigger />
