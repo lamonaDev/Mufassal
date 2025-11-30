@@ -3,7 +3,6 @@ import ReactApexChart from "react-apexcharts";
 interface SeriesData {
     data: number[];
 }
-
 interface ChartOptions {
     chart: {
         id: string;
@@ -14,7 +13,6 @@ interface ChartOptions {
     };
     colors: string[];
 }
-
 interface ApexChartState {
     series: SeriesData[];
     options: ChartOptions;
@@ -27,13 +25,10 @@ interface ApexChartState {
     seriesSmall2: SeriesData[];
     optionsSmall2: ChartOptions;
 }
-
 interface GenerateDayWiseTimeSeriesParams {
     min: number;
     max: number;
 }
-
-// Implement the generateDayWiseTimeSeries function
 const generateDayWiseTimeSeries = (baseval: number, count: number, { min, max }: GenerateDayWiseTimeSeriesParams): number[] => {
     const series: number[] = [];
     let x = baseval;
@@ -44,7 +39,6 @@ const generateDayWiseTimeSeries = (baseval: number, count: number, { min, max }:
     }
     return series;
 };
-
 const AnotherChartToTest: React.FC = () => {
     const [state, setState] = React.useState<ApexChartState>({
         series: [{

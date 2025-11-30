@@ -54,8 +54,7 @@ export default function RootLayout({
               <Navbar />
             </div>
             <SidebarTrigger />
-            {children}
-          <Footer />
+              {children}
           </main>
         </SidebarProvider>
       </body>
