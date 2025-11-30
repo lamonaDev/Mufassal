@@ -10,7 +10,7 @@ export default function HomePage() {
     <main className='flex flex-row overflow-hidden h-screen'>
       <div className='flex-1 overflow-auto'>
         <Hero />
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center overflow-hidden'>
           <OtherChart />
         </div>
       <Footer/>
